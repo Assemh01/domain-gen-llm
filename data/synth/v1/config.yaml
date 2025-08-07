@@ -1,0 +1,18 @@
+version: v1
+seed: 42
+n_total: 1000
+frac_blocked: 0.12
+train_val_test_split: [0.70, 0.15, 0.15]
+
+tlds_primary: [".com", ".co", ".org"]
+tlds_secondary: [".io", ".ai", ".net", ".shop", ".store", ".family", ".kids", ".care"]
+min_suggestions: 5
+max_suggestions: 10
+
+languages: ["en"]
+complexity_mix: { L1: 0.5, L2: 0.35, L3: 0.15 }
+
+constraints:
+  allow_hyphens_rate: 0.20
+  allow_numbers_rate: 0.15
+  pun_preference_rate: 0.25
