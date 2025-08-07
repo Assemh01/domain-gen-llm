@@ -56,3 +56,54 @@ doxxing 1
 - Blocked examples happened to fall into the **train** slice in this v0 sample; overall target remains ≈12%.
 
 **Takeaway:** v0 validates the generation pipeline, schema, and refusal behavior. Next: generate **v1 (n=1000)** for baseline training and formal evaluations.
+
+
+### v1 (baseline training set) — Dataset stats & notes
+
+**Scale-up (reproducible):**
+- Same synthetic pipeline, fixed seed **42** (`data/synth/v1/config.yaml`).
+- Safe/blocked mix targets **~12% blocked** per `docs/SAFETY_POLICY.md`.  
+  *Observed on train:* 84 / 700 = **12.0%** blocked (matches target).
+
+**Counts (v1):**
+- **Total:** 1000  
+- **Splits (70/15/15):** Train **700**, Val **150**, Test **150**
+
+**Distributions (train split sanity check):**
+by_industry:
+blocked 84
+grocery 49
+gardening 48
+coffee_shop 48
+childcare 48
+education 48
+fitness 46
+pet_care 46
+family_therapy 46
+nonprofit 44
+
+by_complexity:
+L1 310
+L2 210
+L3 96
+N/A 84
+
+safety_counts:
+safe 616
+child_exploitation 20
+adult_explicit 19
+doxxing 16
+weapons_minor 15
+hate_violence 8
+illegal 6
+
+**Example (train):**
+- **Sample input (truncated):** premium education in San Diego; TLDs `.com/.co/.org`; constraints: `allow_hyphens=False`, `allow_numbers=False`, `prefer_puns=False`.
+- **Sample output:** `status=success` with names like `academyclass.com`, `classstudy.org`, `learnacademy.org` *(plus a couple borderline blends like `ledemy.com`, `tuarn.co`)*.
+
+**Notes & limitations:**
+- **Quality blips:** A few blends (e.g., `ledemy`, `tuarn`) are pronounceable but feel off-brand. This is acceptable for a baseline but flagged for a **v1.1 data pass** (add extra filters/wordbanks to prune awkward blends and near-duplicates).
+- Confidence remains a heuristic (length + TLD priors + small penalties), used as a feature for analysis—not a calibrated metric.
+- “blocked” appears as an `industry` label for refusal rows by design; we’ll keep it, but we’ll also report safety separately in evals.
+
+**Decision:** v1 is good enough to train the **baseline** now. We’ll plan a **v1.1** generator tweak (stronger blend filter + duplicate suppression) during the first improvement cycle if baseline evals confirm it’s needed.
