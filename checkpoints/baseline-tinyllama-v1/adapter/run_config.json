@@ -1,0 +1,32 @@
+{
+  "model_id": "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+  "run_tag": "baseline-tinyllama-v1",
+  "seed": 42,
+  "max_train_samples": 600,
+  "max_val_samples": 120,
+  "max_seq_len": 512,
+  "lora": {
+    "r": 8,
+    "lora_alpha": 16,
+    "lora_dropout": 0.05,
+    "target_modules": [
+      "v_proj",
+      "up_proj",
+      "q_proj",
+      "down_proj",
+      "o_proj",
+      "k_proj",
+      "gate_proj"
+    ],
+    "task_type": "CAUSAL_LM",
+    "bias": "none"
+  },
+  "train_args": {
+    "epochs": 1,
+    "lr": 0.0002,
+    "batch_size": 1,
+    "grad_accum": 8,
+    "warmup_ratio": 0.05,
+    "weight_decay": 0.0
+  }
+}
