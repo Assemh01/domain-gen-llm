@@ -9,3 +9,9 @@ data\external\
 .checkpoints\ 
 wandb\ 
 mlruns\ 
+.venv/
+venv/
+__pycache__/
+.ipynb_checkpoints/
+checkpoints/
+.env
