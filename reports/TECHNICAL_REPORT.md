@@ -110,9 +110,9 @@ illegal 6
 
 ### Baseline Model — Results (TinyLlama + LoRA, CPU)
 
-**Training setup (recap):** TinyLlama/TinyLlama-1.1B-Chat-v1.0, LoRA (r=8, alpha=16, dropout=0.05), seq_len=512, epochs=1, lr=2e-4, batch=1, grad_accum=8; seed=42. Train: 600 examples (subset of v1), Val: 120.
+**Training setup (recap):** TinyLlama/TinyLlama-1.1B-Chat-v1.0; LoRA (r=8, alpha=16, dropout=0.05; target: q/k/v/o/gate/up/down proj); seq_len=512; epochs=1; lr=2e-4; per_device_batch=1; grad_accum=8; seed=42. Train=600 (subset of v1), Val=120.
 
-**LoRA footprint:** trainable params = **6,307,840** / 1.106B (**0.57%**).
+**LoRA footprint:** trainable params **6,307,840** / 1.106B → **0.57%**.
 
 **Learning curve (HF Trainer):**
 - Step 20 — train **0.739**, val **0.526**
@@ -120,17 +120,16 @@ illegal 6
 - Step 60 — train **0.336**, val **0.317**
 - **Final (75 steps)** — `training_loss = 0.6021`
 
-**Checkpoint versioning:** 
-- Adapters saved locally → `checkpoints/baseline-tinyllama-v1/adapter`
-- Pushed to Hugging Face Hub → **AssemHomsi/domain-gen-tinyllama-baseline-v1** (adapters + tokenizer + run_config.json)
+**Structural compliance (val sample n=20):**
+- JSON parse rate: **0/20 = 0.00**
+- Blocked refusals detected (schema): **0/20**
+- Failure modes: (a) model echoes the instruction, (b) no JSON object emitted, (c) partial/truncated JSON.
 
-**Initial qualitative evaluation (val sample):**
-- Several predictions **echo the instruction** and **do not return strict JSON**. Example snippet (truncated):
-  > “You are a domain name generator… Return ONLY JSON in this schema: {"status": "success|blocked"...”
-- Early failure modes observed:
-  - **JSON noncompliance / schema drift** (model echoes prompt or returns prose)
-  - **Partial JSON** (truncated object or missing `status`/`suggestions`)
-  - Occasional **awkward blends** in names (e.g., “ledemy”, “tuarn”) consistent with v1 generator limitations
+**Qualitative notes:** Several predictions echo the prompt instead of emitting JSON; some suggestions include awkward blends (e.g., “ledemy”, “tuarn”), consistent with v1 generator limits.
 
-**Takeaway:** The baseline learns the task format to some extent (loss improves) but **output formatting isn’t reliable**. We’ll (a) quantify this via structural metrics and LLM-judge scores, and (b) address it in the improved model with a stronger base (Mistral-7B QLoRA) and minor data/format tweaks.
+**Checkpoint versioning & artifacts:**
+- Local adapters: `checkpoints/baseline-tinyllama-v1/adapter`
+- Hugging Face: **AssemHomsi/domain-gen-tinyllama-baseline-v1** (adapters + tokenizer + `run_config.json`)
+- Predictions (val sample): `eval/preds_baseline-tinyllama-v1_val.jsonl`
 
+**Takeaway:** The model learns the distribution (loss improves) but **formatting is unreliable**. Next, we’ll apply a small **format shim** (no retraining) to obtain parseable JSON for evaluation, then move to an **improved model** (Mistral-7B QLoRA) + minor data tweaks.
