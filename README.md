@@ -31,6 +31,7 @@ source .venv/bin/activate
 pip install -r requirements.txt
 # (optional, for eval) set your OpenAI key
 echo "OPENAI_API_KEY=YOUR_KEY_HERE" > .env
+```
 
 ##1b) Setup (Windows PowerShell)
 ```bash
@@ -39,6 +40,7 @@ python -m venv .venv
 pip install -r requirements.txt
 # (optional, for eval) create .env with your key
 "OPENAI_API_KEY=YOUR_KEY_HERE" | Out-File -Encoding ascii .env
+```
 
 ### **2\) Run the pipeline (notebooks)**
 
