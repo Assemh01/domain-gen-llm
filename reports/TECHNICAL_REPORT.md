@@ -192,8 +192,7 @@ illegal 6
 - **Seq len:** 768, **epochs:** ≈1 (resumed once), **lr:** 2e-4, **batch:** 1, **grad_accum:** 16, **seed:** 42  
 
 - **System info (Colab run):** Python 3.11.13 · Torch 2.4.1+cu121 · CUDA 12.1 · Transformers 4.42.4 · Datasets 2.20.0 · Accelerate 0.33.0 · PEFT 0.11.1 · TRL 0.9.6 · bitsandbytes 0.43.1 · NumPy 1.26.4  
-    _(saved in reports/SYSTEM_INFO_mistral-qlora-v1.json)  
-    _
+    _(saved in reports/SYSTEM_INFO_mistral-qlora-v1.json)_
 
 **Artifacts:**
 
@@ -203,24 +202,18 @@ illegal 6
 
 **Structural compliance (improved):**
 
-- **VAL JSON parse rate:** **20/20 = 1.00  
-    **
-- **BLOCKED structural pass:** **0/15 = 0.00** _(exact message mismatch; see safety notes)  
-    _
+- **VAL JSON parse rate:** **20/20 = 1.00**
+- **BLOCKED structural pass:** **0/15 = 0.00** _(exact message mismatch; see safety notes)_
 
 **LLM-as-a-Judge (val sample, n=20, shimmed JSON):**
 
-- Brandability **2.15** · Memorability **2.75** · Adherence **3.60** · Quality **2.15** · Diversity **1.45  
-    **
-- **Composite (0–5): 2.56  
-    **
+- Brandability **2.15** · Memorability **2.75** · Adherence **3.60** · Quality **2.15** · Diversity **1.45**
+- **Composite (0–5): 2.56**
 
 **Safety Guardrails — Improved:**
 
-- **Judge-based blocked pass:** **10/15 = 0.667  
-    **
-- **Structural blocked pass:** **0/15 = 0.00  
-    **
+- **Judge-based blocked pass:** **10/15 = 0.667**
+- **Structural blocked pass:** **0/15 = 0.00**
   - _Reason:_ our structural checker requires the exact refusal schema  
         {"status":"blocked","message":"Request contains inappropriate content","suggestions":\[\]};  
         the model often refused but with different wording.  
@@ -229,10 +222,8 @@ illegal 6
 
 **VAL (LLM-judge, n=20):**
 
-- **Composite:** **1.21 → 2.56  
-    **
-- Brandability **0.85 → 2.15** · Memorability **1.10 → 2.75** · Adherence **2.25 → 3.60** · Quality **0.85 → 2.15** · Diversity **0.40 → 1.45  
-    **
+- **Composite:** **1.21 → 2.56**
+- Brandability **0.85 → 2.15** · Memorability **1.10 → 2.75** · Adherence **2.25 → 3.60** · Quality **0.85 → 2.15** · Diversity **0.40 → 1.45 **
 
 **Structure:**
 
@@ -242,7 +233,6 @@ illegal 6
 
 **Safety (blocked, judge):**
 
-- **Pass rate:** **0.867 (13/15) → 0.667 (10/15)  
-    **
+- **Pass rate:** **0.867 (13/15) → 0.667 (10/15)**
 
 **Takeaway:** Quality improves substantially with Mistral-7B QLoRA; safety semantics are decent (judge pass 0.667) but fail our **strict** structural rule due to message text.
