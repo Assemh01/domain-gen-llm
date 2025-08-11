@@ -1,0 +1,22 @@
+criteria:
+  brandability:
+    weight: 0.25
+    desc: Distinctive, fits business & audience
+  memorability:
+    weight: 0.2
+    desc: Easy to recall; avoids awkward blends
+  adherence:
+    weight: 0.25
+    desc: Follows constraints + valid JSON schema
+  quality:
+    weight: 0.2
+    desc: Pronounceable, reasonable length
+  diversity:
+    weight: 0.1
+    desc: Varied suggestions; low duplication
+scales:
+  score_min: 0
+  score_max: 5
+blocked_policy:
+  message_contains: inappropriate content
+  suggestions_must_be_empty: true

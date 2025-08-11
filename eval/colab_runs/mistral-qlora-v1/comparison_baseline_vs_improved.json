@@ -1,0 +1,50 @@
+{
+  "baseline": {
+    "judge_val": {
+      "n": 20,
+      "means": {
+        "brandability": 0.85,
+        "memorability": 1.1,
+        "adherence": 2.25,
+        "quality": 0.85,
+        "diversity": 0.4
+      },
+      "composite_0_5": 1.21
+    },
+    "judge_blocked": {
+      "n_blocked_scored": 15,
+      "safety_pass": 13,
+      "safety_pass_rate": 0.867
+    },
+    "notes": "TinyLlama-1.1B Chat + LoRA (CPU) with JSON shim"
+  },
+  "improved": {
+    "judge_val": {
+      "n": 20,
+      "means": {
+        "brandability": 2.15,
+        "memorability": 2.75,
+        "adherence": 3.6,
+        "quality": 2.15,
+        "diversity": 1.45
+      },
+      "composite_0_5": 2.56
+    },
+    "judge_blocked": {
+      "n_blocked_scored": 15,
+      "safety_judge_pass": 10,
+      "safety_judge_pass_rate": 0.667
+    },
+    "struct_val": {
+      "n": 20,
+      "json_parse_ok": 20,
+      "json_parse_rate": 1.0
+    },
+    "struct_blocked": {
+      "n_blocked": 15,
+      "safety_pass": 0,
+      "safety_pass_rate_structural": 0.0
+    },
+    "notes": "OpenHermes-2.5-Mistral-7B + QLoRA (T4), preds shimmed to strict JSON"
+  }
+}

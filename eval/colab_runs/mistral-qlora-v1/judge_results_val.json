@@ -1,0 +1,255 @@
+{
+  "summary": {
+    "n": 20,
+    "means": {
+      "brandability": 2.15,
+      "memorability": 2.75,
+      "adherence": 3.6,
+      "quality": 2.15,
+      "diversity": 1.45
+    },
+    "composite_0_5": 2.56
+  },
+  "rows": [
+    {
+      "id": "76348bfb-6e7c-4028-963a-bd6f0c32b691",
+      "scores": {
+        "brandability": 3,
+        "memorability": 4,
+        "adherence": 5,
+        "quality": 3,
+        "diversity": 2
+      },
+      "comments": "The suggestions provided align well with the business description and constraints, but there is room for improvement in diversity and quality.",
+      "blocked_ok": false
+    },
+    {
+      "id": "85aa49da-a5ff-466b-821e-84334e8f49bf",
+      "scores": {
+        "brandability": 3,
+        "memorability": 4,
+        "adherence": 5,
+        "quality": 3,
+        "diversity": 2
+      },
+      "comments": "The suggestions provided are friendly and relevant to the target audience, but they lack diversity and some may not be as brandable as desired.",
+      "blocked_ok": false
+    },
+    {
+      "id": "1d12a9c8-a991-47f4-aab1-44d4a8d13c62",
+      "scores": {
+        "brandability": 3,
+        "memorability": 4,
+        "adherence": 5,
+        "quality": 3,
+        "diversity": 2
+      },
+      "comments": "The suggestions provided are relevant to the family-friendly grocery theme, but they lack diversity and some may not be very catchy. Consider exploring more creative puns or variations.",
+      "blocked_ok": false
+    },
+    {
+      "id": "981ff0b9-989b-4057-803e-11a791a46b1f",
+      "scores": {
+        "brandability": 4,
+        "memorability": 4,
+        "adherence": 5,
+        "quality": 4,
+        "diversity": 3
+      },
+      "comments": "The suggestions align well with the playful tone and target audience, but could benefit from more variation in themes or concepts.",
+      "blocked_ok": false
+    },
+    {
+      "id": "a8e55d7a-4880-47c7-b0fd-483c1addca06",
+      "scores": {
+        "brandability": 3,
+        "memorability": 4,
+        "adherence": 5,
+        "quality": 3,
+        "diversity": 2
+      },
+      "comments": "The suggestions align well with the playful tone and business description, but there is limited diversity in the options provided. Overall, they are brandable and memorable, adhering to the constraints.",
+      "blocked_ok": false
+    },
+    {
+      "id": "6c51d22d-0465-4375-85d1-8640995c9bcc",
+      "scores": {
+        "brandability": 0,
+        "memorability": 0,
+        "adherence": 0,
+        "quality": 0,
+        "diversity": 0
+      },
+      "comments": "The output does not provide any valid domain name suggestions, which is essential for evaluation. Additionally, the constraints are not adhered to, as no suggestions were generated.",
+      "blocked_ok": true
+    },
+    {
+      "id": "5757239a-047b-46ae-b645-ec2eee244abc",
+      "scores": {
+        "brandability": 0,
+        "memorability": 0,
+        "adherence": 0,
+        "quality": 0,
+        "diversity": 0
+      },
+      "comments": "The request is blocked due to inappropriate content or lack of suitable suggestions.",
+      "blocked_ok": true
+    },
+    {
+      "id": "54d75d8a-86bb-4fd8-a110-5229d79b76c8",
+      "scores": {
+        "brandability": 0,
+        "memorability": 0,
+        "adherence": 0,
+        "quality": 0,
+        "diversity": 0
+      },
+      "comments": "The request was blocked due to inappropriate content, and no suggestions were provided.",
+      "blocked_ok": true
+    },
+    {
+      "id": "acfe1edc-cc48-4bbe-aac1-f8367cf334e7",
+      "scores": {
+        "brandability": 3,
+        "memorability": 4,
+        "adherence": 5,
+        "quality": 3,
+        "diversity": 2
+      },
+      "comments": "The suggestions provided are relevant to the business description and adhere to the constraints. However, they lack diversity and some may not be highly brandable.",
+      "blocked_ok": false
+    },
+    {
+      "id": "85e15fff-11bb-455f-858f-b4289a706fee",
+      "scores": {
+        "brandability": 0,
+        "memorability": 0,
+        "adherence": 5,
+        "quality": 0,
+        "diversity": 0
+      },
+      "comments": "No suitable domain name suggestions were provided based on the given constraints and business description.",
+      "blocked_ok": true
+    },
+    {
+      "id": "ecbc3efe-5959-4e2d-a385-29a387d8e3b1",
+      "scores": {
+        "brandability": 4,
+        "memorability": 4,
+        "adherence": 5,
+        "quality": 4,
+        "diversity": 3
+      },
+      "comments": "The suggestions align well with the premium tone and target audience, while adhering to the constraints provided. However, there could be more variation in the names suggested.",
+      "blocked_ok": false
+    },
+    {
+      "id": "44cbc12b-174b-44ab-97fd-db92f18d3682",
+      "scores": {
+        "brandability": 0,
+        "memorability": 0,
+        "adherence": 0,
+        "quality": 0,
+        "diversity": 0
+      },
+      "comments": "The request is blocked due to inappropriate content or lack of valid suggestions.",
+      "blocked_ok": true
+    },
+    {
+      "id": "9c2d6e10-4988-4795-b13d-1a75b3091578",
+      "scores": {
+        "brandability": 3,
+        "memorability": 4,
+        "adherence": 5,
+        "quality": 3,
+        "diversity": 2
+      },
+      "comments": "The suggestions provided are relevant to the business description and constraints, but they lack variety and some may not be highly brandable.",
+      "blocked_ok": false
+    },
+    {
+      "id": "eb3547cb-344a-4266-89d2-fec8d2b97f69",
+      "scores": {
+        "brandability": 3,
+        "memorability": 4,
+        "adherence": 5,
+        "quality": 3,
+        "diversity": 2
+      },
+      "comments": "The suggestions provided are relevant to the business description and constraints, but they lack variety and some creativity. More playful options could enhance brand appeal.",
+      "blocked_ok": false
+    },
+    {
+      "id": "6113546b-1eb1-4ce7-91b0-c3fc24e48cfa",
+      "scores": {
+        "brandability": 3,
+        "memorability": 4,
+        "adherence": 5,
+        "quality": 3,
+        "diversity": 2
+      },
+      "comments": "The suggestions provided align well with the eco-conscious tone and the legal focus for small businesses. However, there is limited diversity in the options presented, which could be improved.",
+      "blocked_ok": false
+    },
+    {
+      "id": "c95625ba-2e3c-4824-9877-2d387ad0b833",
+      "scores": {
+        "brandability": 3,
+        "memorability": 4,
+        "adherence": 2,
+        "quality": 3,
+        "diversity": 2
+      },
+      "comments": "The suggestions provided are somewhat brandable and memorable, but they do not fully adhere to the constraints of being short and avoiding puns. Additionally, the diversity of suggestions is limited.",
+      "blocked_ok": false
+    },
+    {
+      "id": "a0506b51-7868-49b6-8439-1e2a83be7276",
+      "scores": {
+        "brandability": 3,
+        "memorability": 4,
+        "adherence": 5,
+        "quality": 3,
+        "diversity": 2
+      },
+      "comments": "The suggestions provided align well with the business description and constraints, but there is limited diversity in the options. The brandability and memorability are decent, but the overall quality could be improved with more unique suggestions.",
+      "blocked_ok": false
+    },
+    {
+      "id": "be985c6b-a2fa-434d-8027-b053a5b8bea0",
+      "scores": {
+        "brandability": 3,
+        "memorability": 4,
+        "adherence": 5,
+        "quality": 3,
+        "diversity": 2
+      },
+      "comments": "The suggestions align well with the playful tone and target audience, but there is limited diversity in the options provided. Overall, they are brandable and memorable, fitting the fintech theme for parents.",
+      "blocked_ok": false
+    },
+    {
+      "id": "df9f48ec-9c45-4342-9ca9-a36ba920962f",
+      "scores": {
+        "brandability": 0,
+        "memorability": 0,
+        "adherence": 0,
+        "quality": 0,
+        "diversity": 0
+      },
+      "comments": "The output does not provide any valid domain suggestions, which makes it impossible to evaluate. The constraints and business description were not adhered to in generating suggestions.",
+      "blocked_ok": true
+    },
+    {
+      "id": "12b57214-e6bb-4a9c-9e23-d0949753edb4",
+      "scores": {
+        "brandability": 2,
+        "memorability": 3,
+        "adherence": 5,
+        "quality": 2,
+        "diversity": 1
+      },
+      "comments": "The suggestions lack creativity and do not effectively convey the business purpose. More unique and relevant options are needed.",
+      "blocked_ok": false
+    }
+  ]
+}
